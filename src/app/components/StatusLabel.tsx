@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import s from './StatusLabel.module.css';
+import { log } from 'console';
 
 export enum Status {
   Active = 'active',
@@ -20,6 +20,7 @@ export default function StatusLabel({
   status,
   disabled,
 }: StatusLabelProps) {
+  log(process.env.CRM_SECRET_KEY);
   return (
     <div>
       <span
