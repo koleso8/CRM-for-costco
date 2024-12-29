@@ -3,7 +3,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import StatusLabel, { Status } from './StatusLabel';
 export interface CompanyRowProps {
-  id: number;
+  id: string;
   category: string;
   company: string;
   status: Status;
