@@ -8,7 +8,7 @@ export default async function Page({ params }: PageProps) {
   const { id } = await params;
   return (
     <>
-      <h1>Company {String(id)}</h1>
+      <h1>Companyy {String(id)}</h1>
     </>
   );
 }
