@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import dynamic from 'next/dynamic';
-// import CompanyFormModal from './CompanyFormModal';
 
 const CompanyFormModal = dynamic(() => import('./CompanyFormModal'), {
   ssr: false,

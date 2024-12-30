@@ -4,11 +4,10 @@ export interface PageProps {
   params: { id: string };
 }
 
-export default async function Page({ params }: PageProps) {
-  const { id } = await params;
+export default function Page({ params }: PageProps) {
   return (
     <>
-      <h1>Company {String(id)}</h1>
+      <h2>Company {params.id}</h2>
     </>
   );
 }
