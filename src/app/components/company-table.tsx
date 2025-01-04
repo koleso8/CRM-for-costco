@@ -1,7 +1,9 @@
 import React from 'react';
+
 export interface CompanyTableProps {
   children?: React.ReactNode;
 }
+
 const headers = [
   'Category',
   'Company',
@@ -10,6 +12,7 @@ const headers = [
   'Country',
   'Joined date',
 ];
+
 export default function CompanyTable({ children }: CompanyTableProps) {
   return (
     <div className="py-8 px-10 bg-gray-100">

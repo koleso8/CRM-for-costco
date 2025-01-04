@@ -1,10 +1,8 @@
 import React from 'react';
 
-export interface PageProps {
-  children: React.ReactNode;
-}
+export interface PageProps {}
 
-export default function page({ children }: PageProps) {
+export default function Page({}: PageProps) {
   return (
     <main>
       <h1 className="text-xl">Dashboard Page</h1>

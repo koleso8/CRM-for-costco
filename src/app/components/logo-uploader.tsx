@@ -1,5 +1,7 @@
-import Image from 'next/image';
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
 
 export interface LogoUploaderProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
@@ -14,7 +16,7 @@ export default function LogoUploader({
 }: LogoUploaderProps) {
   return (
     <div className="flex gap-10 mb-3">
-      {label && <p className="text-base text-gray-900">{label}</p>}
+      {label && <p className="text-base color-gray-900">{label}</p>}
       <label
         htmlFor={id}
         className="flex flex-col items-center justify-center w-40 h-40 bg-white border border-slate-900 border-dashed rounded-full cursor-pointer"
@@ -31,8 +33,8 @@ export default function LogoUploader({
         )}
         <input
           {...rest}
-          type="file"
           id={id}
+          type="file"
           accept="image/*"
           className="hidden"
         />

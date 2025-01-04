@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '@/app/components/header';
 
 export interface PageProps {
   params: { id: string };
@@ -7,7 +8,7 @@ export interface PageProps {
 export default function Page({ params }: PageProps) {
   return (
     <>
-      <h2>Company {params.id}</h2>
+      <Header>Company ({params.id})</Header>
     </>
   );
 }

@@ -1,10 +1,10 @@
 'use client';
 
-import { Form, Formik } from 'formik';
 import React from 'react';
-import InputField from './InputField';
-import Button from './Button';
-import LogoUploader from './LogoUploader';
+import { Form, Formik } from 'formik';
+import Button from '@/app/components/button';
+import InputField from '@/app/components/input-field';
+import LogoUploader from '@/app/components/logo-uploader';
 
 export type CompanyFieldValues = {
   name: string;
@@ -46,7 +46,7 @@ export default function CompanyForm({ onSubmit }: CompanyFormProps) {
               placeholder="Category"
               name="category"
             />
-            <InputField label="Joined date" placeholder="date" name="date" />
+            <InputField label="Joined date" type="date" name="date" />
             <InputField
               label="Description"
               placeholder="Description"

@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import StatusLabel, { Status } from './StatusLabel';
+import StatusLabel, { Status } from '@/app/components/status-label';
+
 export interface CompanyRowProps {
-  id?: string;
+  id: number;
   category: string;
   company: string;
   status: Status;
@@ -11,12 +12,14 @@ export interface CompanyRowProps {
   country: string;
   joinedDate: string;
 }
+
 const labelByStatus = {
   [Status.Active]: 'Active',
   [Status.NotActive]: 'Not Active',
   [Status.Pending]: 'Pending',
   [Status.Suspended]: 'Suspended',
 };
+
 export default function CompanyRow({
   id,
   category,
@@ -48,7 +51,7 @@ export default function CompanyRow({
           <span
             className={clsx(
               'text-sm font-medium',
-              promotion ? 'text-green-700' : 'text-red-700'
+              promotion ? 'text-green-700' : 'text-red-700',
             )}
           >
             {promotion ? 'Yes' : 'No'}
